@@ -1,0 +1,77 @@
+# Spring Boot / Java
+HELP.md
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+bin/
+*.jar
+*.war
+*.ear
+*.class
+
+# Node / React
+library-ui/node_modules/
+library-ui/.pnp
+library-ui/.pnp.js
+library-ui/coverage/
+library-ui/build/
+library-ui/npm-debug.log*
+library-ui/yarn-debug.log*
+library-ui/yarn-error.log*
+library-ui/.env.local
+library-ui/.env.development.local
+library-ui/.env.test.local
+library-ui/.env.production.local
+
+# STS/Eclipse
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+# IntelliJ IDEA
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# VS Code
+.vscode/
+.history/
+
+# H2 Database
+*.mv.db
+*.trace.db
+*.h2.db
+
+# Logs
+logs/
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Temp files
+*.tmp
+*.bak
+*.swp
+*~.nib

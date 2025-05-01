@@ -1,0 +1,50 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '2.7.18'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+}
+
+group = 'com.management'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = JavaVersion.VERSION_1_8
+	targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	
+	// Swagger UI - using simpler version
+	implementation 'io.springfox:springfox-boot-starter:3.0.0'
+	
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	
+	runtimeOnly 'com.h2database:h2'
+	
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+// Specify main class for Spring Boot application
+springBoot {
+    mainClass = 'com.management.library.LibraryManagementApplication'
+}
+
+test {
+    useJUnitPlatform()
+    // Log each test as it runs
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+    // Set the context path for tests
+    systemProperty 'server.servlet.context-path', '/'
+}
